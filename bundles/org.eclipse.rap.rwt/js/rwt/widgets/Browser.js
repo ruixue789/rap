@@ -243,7 +243,11 @@ rwt.qx.Class.define( "rwt.widgets.Browser", {
       this._checkIframeAccess();
       if( this.isLoaded() ) {
         try {
-          this._createFunctionImpl( name );
+          if ( name === "closeWindow" ) {
+            this._createAsyncFunctionImpl( name );
+          } else {
+            this._createFunctionImpl( name );
+          }
           this._createFunctionWrapper( name );
         } catch( e ) {
           var msg = "Unable to create function: \"" + name + "\".\n" + e;
@@ -300,6 +304,28 @@ rwt.qx.Class.define( "rwt.widgets.Browser", {
               }
             }
           }
+        } catch( ex ) {
+          rwt.runtime.ErrorHandler.processJavaScriptError( ex );
+        }
+        return result;
+      };
+    },
+
+    // Workaround for https://bugs.eclipse.org/bugs/show_bug.cgi?id=483075
+    _createAsyncFunctionImpl : function( name ) {
+      var win = this.getContentWindow();
+      var connection = rwt.remote.Connection.getInstance();
+      var id = rwt.remote.ObjectRegistry.getId( this );
+      var that = this;
+      win[ name + "_impl" ] = function() {
+        var result = {};
+        try {
+          var properties = {
+            "name" : name,
+            "arguments" : that.toJSON( arguments )
+          };
+          connection.getMessageWriter().appendCall( id, "executeFunction", properties );
+          connection.sendImmediate( true );
         } catch( ex ) {
           rwt.runtime.ErrorHandler.processJavaScriptError( ex );
         }
