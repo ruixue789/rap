@@ -96,6 +96,13 @@ public class StyledText extends Text {
 
   }
 
+  /*
+   * Empty stub
+   */
+  public void addExtendedModifyListener( ExtendedModifyListener listener ) {
+
+  }
+
   public int getLineAtOffset( int iOffset ) {
     String beforeOffset = getText().substring( 0, iOffset );
     return beforeOffset.length() - beforeOffset.replace( DELIMITER, "" ).length();
@@ -117,6 +124,34 @@ public class StyledText extends Text {
    */
   public Point getLocationAtOffset( int offset ) {
     return getLocation();
+  }
+
+  /*
+   * Empty stub
+   */
+  public int getOffsetAtLocation( Point point ) {
+    return 0;
+  }
+
+  /*
+   * Empty stub
+   */
+  public void cut() {
+
+  }
+
+  /*
+   * Empty stub
+   */
+  public void copy() {
+
+  }
+
+  /*
+   * Empty stub
+   */
+  public void paste() {
+
   }
 
   /*
