@@ -92,6 +92,13 @@ public class StyledText extends Text {
   /*
    * Empty stub
    */
+  public StyleRange getStyleRangeAtOffset(int offset) {
+    return null;
+  }
+
+  /*
+   * Empty stub
+   */
   public void addLineStyleListener( LineStyleListener listener ) {
 
   }
