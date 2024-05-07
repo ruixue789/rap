@@ -30,6 +30,7 @@
     <module>tests/org.eclipse.rap.rwt.testfixture</module>
     <!-- Builder projects -->
     <module>releng/org.eclipse.rap.clientbuilder</module>
+    <module>tests/org.eclipse.rap.rwt.test</module>
   </modules>
 
 </project>

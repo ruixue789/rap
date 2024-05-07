@@ -2,3 +2,15 @@ bin/
 target/
 .DS_Store/
 node_modules/
+/.idea
+/bundles/org.eclipse.rap.jface/*.iml
+bundles/org.eclipse.rap.filedialog/org.eclipse.rap.filedialog.iml
+bundles/org.eclipse.rap.rwt/org.eclipse.rap.rwt.iml
+org.eclipse.rap.runtime-parent.iml
+releng/org.eclipse.rap.clientbuilder/org.eclipse.rap.clientbuilder.iml
+tests/org.eclipse.rap.rwt.testfixture/org.eclipse.rap.rwt.testfixture.iml
+/bundles/org.eclipse.rap.fileupload/org.eclipse.rap.fileupload.iml
+/bundles/org.eclipse.rap.rwt/org.eclipse.rap.rwt.iml
+/org.eclipse.rap.runtime-parent.iml
+/releng/org.eclipse.rap.clientbuilder/org.eclipse.rap.clientbuilder.iml
+/tests/org.eclipse.rap.rwt.testfixture/org.eclipse.rap.rwt.testfixture.iml
