@@ -13,7 +13,7 @@
 /* Button property defaults */
 
 Button {
-  font: 14px Arial, sans-serif;
+  font: 18px Arial, sans-serif;
   background-image: none;
   background-repeat: repeat;
   background-position: left top;
@@ -36,11 +36,15 @@ Button[TOGGLE],
 Button[ARROW],
 Button[BORDER] {
   border: 1px solid #aaaaaa;
+  font: 20px Verdana, "Lucida Sans", Arial, Helvetica, sans-serif;
+  background-color: red;
 }
 
 Button[ARROW] {
   padding: 4px;
   border: 1px solid #aaaaaa;
+  font: 20px Verdana, "Lucida Sans", Arial, Helvetica, sans-serif;
+  background-color: red;
 }
 
 Button[CHECK],
