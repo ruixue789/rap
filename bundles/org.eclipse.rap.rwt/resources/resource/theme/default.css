@@ -172,8 +172,6 @@ Button[TOGGLE][FLAT] {
   animation: none;
   cursor: pointer;
   text-shadow: 0 1px 0 #ffffff;
-  font: 20px Verdana, "Lucida Sans", Arial, Helvetica, sans-serif;
-  background-color: red;
 }
 
 Button[ARROW],
@@ -188,8 +186,6 @@ Button[ARROW][FLAT] {
     to( #e4e4e4 )
   );
   cursor: pointer;
-  font: 20px Verdana, "Lucida Sans", Arial, Helvetica, sans-serif;
-  background-color: red;
 }
 
 Button[ARROW]:default,
@@ -202,8 +198,6 @@ Button[TOGGLE]:default {
     to( #d4d4d4 )
   );
   border: 1px solid #a0b3ca;
-  font: 20px Verdana, "Lucida Sans", Arial, Helvetica, sans-serif;
-  background-color: red;
 }
 
 Button[ARROW]:disabled,
@@ -215,8 +209,6 @@ Button[TOGGLE]:selected:disabled {
   background-image: none;
   background-color: #fafafa;
   border: 1px solid #d2d2d2;
-  font: 20px Verdana, "Lucida Sans", Arial, Helvetica, sans-serif;
-  background-color: red;
 }
 
 Button[ARROW]:hover,

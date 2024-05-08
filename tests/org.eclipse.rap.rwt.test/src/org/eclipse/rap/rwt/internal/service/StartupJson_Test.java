@@ -102,6 +102,7 @@ public class StartupJson_Test {
       = message.findCallOperation( THEME_STORE_TYPE, METHOD_LOAD_FALLBACK_THEME );
     assertNotNull( operation );
     String expected = "rwt-resources/rap-rwt.theme.Fallback.json";
+    /**不要调试过此断点，可以看到C:\Users\pc\AppData\Local\Temp\rap-test-*** 下有rap-rwt.theme.Fallback.json件生成  **/
     assertEquals( expected, operation.getParameters().get( PROPERTY_URL ).asString() );
   }
 
@@ -116,6 +117,7 @@ public class StartupJson_Test {
       = message.findCallOperation( THEME_STORE_TYPE, METHOD_LOAD_ACTIVE_THEME );
     assertNotNull( operation );
     String expected = "rwt-resources/rap-rwt.theme.Default.json";
+    /**不要调试过此断点，可以看到C:\Users\pc\AppData\Local\Temp\rap-test-*** 下有rap-rwt.theme.Default.json文件生成  **/
     assertEquals( expected, operation.getParameters().get( PROPERTY_URL ).asString() );
   }
 
